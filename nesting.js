@@ -50,8 +50,20 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
-
+function employeeUpdater() {
+  for (let i = 0; i < employees.length; i++) {
+    for (let key in employees[i] ) {
+      if (employees[i][key] === "Theo") {
+        employees.splice(i, 1)
+      } 
+      if (employees[i][key] === "Lorie") {
+        employees[i]["department"] = "HR"
+      }
+    }
+  }
+    return employees
+}
+    
 
 
 ////////// PROBLEM 2 //////////
@@ -68,7 +80,16 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+function removeDuplicates() {
+  for (let i = 0 ; i < workplaceAccidents.length ; i++) {
+    for (let j = 0 ; j < workplaceAccidents.length ; j++) {
+      if (workplaceAccidents[i] === workplaceAccidents[j] && i !== j) {
+        workplaceAccidents.splice(i, 1)
+      }
+    }
+  }
+  return workplaceAccidents
+}
 
 
 
@@ -97,8 +118,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat['catFriends'][0]['activities'][1];
+var fluffy2ndFriend = cat['catFriends'][1]['name'];
 
 
 
@@ -138,8 +159,22 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
-
+// function recordCleaner() {
+//   for (let i = 0 ; myCar['accidents'].length ; i++) {
+//     for (let key in myCar['accidents'][i]) {
+//       if (myCar['accidents'][i][key] === true) {
+//         myCar['accidents'][i]['atFaultForAccident'] = false
+//         }
+//       }
+        
+//     }
+//     return myCar
+  // }
+function recordCleaner() {
+  for (let key in myCar) {
+    for (let i = 0)
+  }
+}
 
 
 ////////// PROBLEM 5 //////////
